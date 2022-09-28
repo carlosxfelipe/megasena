@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styled from "styled-components";
 
 const FlexContainer = styled.div`
@@ -27,10 +28,23 @@ const Card = styled.div`
   }
 `;
 
+const StyledA = styled.a`
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  margin-top: 160px;
+`;
+
+const StyledLink = ({ href, name }) => (
+  <Link href={href} passHref>
+    <StyledA>{name}</StyledA>
+  </Link>
+);
+
 export default function Cards({ onClick }) {
   return (
     <FlexContainer>
       <Card onClick={onClick}>Gerar novos números</Card>
+      <StyledLink href="/about" name="Sobre este projeto &rarr;" />
     </FlexContainer>
   );
 }
