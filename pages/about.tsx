@@ -19,7 +19,7 @@ export default function About() {
           </p>
           <Link href="/">
             <a>&larr; Voltar</a>
-          </Link>
+          </Link> 
         </Description>
       </Main>
     </Container>

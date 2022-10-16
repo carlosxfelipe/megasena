@@ -6,8 +6,7 @@ const FlexContainer = styled.div`
   align-items: center;
   justify-content: center;
   flex-flow: column wrap;
-  max-width: 800px;
-  margin-top: 3rem;
+  margin-top: 1em;
 `;
 
 const Card = styled.div`
@@ -23,15 +22,22 @@ const Card = styled.div`
   &:hover,
   :focus,
   :active {
-    color: #0070f3;
-    border-color: #0070f3;
+    color: #209869;
+    border-color: #209869;
   }
 `;
 
 const StyledA = styled.a`
   margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-  margin-top: 160px;
+  font-size: 1rem;
+  margin-top: 4em;
+
+  &:hover,
+  :focus,
+  :active {
+    color: #209869;
+    border-color: #209869;
+  }
 `;
 
 const StyledLink = ({ href, name }) => (

@@ -3,7 +3,8 @@ import { createGlobalStyle } from 'styled-components'
 const GlobalStyle = createGlobalStyle`
   html,
   body {
-    color: ${({ theme }) => theme.colors.primary};
+    background-color: #fafafa;
+    color: #2F2F2F;
     padding: 0;
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
