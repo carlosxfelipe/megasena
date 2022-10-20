@@ -9,8 +9,8 @@ import {
 } from "../components/sharedstyles";
 import Cards from "../components/cards";
 
-import Image from 'next/image'
-import logoMegasena from "../public/megasena-icon.png"
+import Image from "next/image";
+import logoMegasena from "../public/megasena-icon.png";
 
 export default function Home() {
   const [numeros, setNumeros] = useState([]);
@@ -18,7 +18,7 @@ export default function Home() {
   useEffect(() => {
     generateMegaNumbers();
   }, []);
- 
+
   const getRandomIntInclusive = (min: number, max: number) => {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -27,8 +27,14 @@ export default function Home() {
 
   const generateMegaNumbers = () => {
     let array = [];
-    for (let i = 0; i < 6; i++) {
-      array.push(getRandomIntInclusive(1, 60));
+    const MAX_NUMEROS = 6;
+    let i = 0;
+    while (i < MAX_NUMEROS) {
+      const numeroAleatorio = getRandomIntInclusive(1, 60);
+      if (!array.includes(numeroAleatorio)) {
+        array.push(numeroAleatorio);
+        i++;
+      }
     }
     array.sort(function (a, b) {
       return a - b;
@@ -47,7 +53,7 @@ export default function Home() {
         <Image
           src={logoMegasena}
           alt="Logo Mega-Sena"
-          width={100} 
+          width={100}
           height={100}
         />
         <Title>Mega-Sena</Title>
