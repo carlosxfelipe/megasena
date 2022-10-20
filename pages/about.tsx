@@ -17,9 +17,10 @@ export default function About() {
             Equipe: Carlos Felipe P. de Araújo, Luiz Carlos F. L. Júnior e
             Nikely Fedechen Martins
           </p>
+          <p>Professor: José Rubens Rodrigues De Sousa</p>
           <Link href="/">
             <a>&larr; Voltar</a>
-          </Link> 
+          </Link>
         </Description>
       </Main>
     </Container>
