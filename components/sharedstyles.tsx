@@ -6,9 +6,8 @@ const Container = styled.div`
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  min-height: 100vh;
 `;
+
 const Main = styled.main`
   padding: 5rem 0;
   flex: 1;
@@ -19,7 +18,7 @@ const Main = styled.main`
 `;
 
 const Title = styled.h1`
-  margin: 0 0 .3em 0;
+  margin: 0 0 0.3em 0;
   line-height: 1.15;
   font-size: 4rem;
   font-weight: 800;
@@ -39,7 +38,7 @@ const Title = styled.h1`
   }
 `;
 
-const Description = styled.p`
+const Description = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;

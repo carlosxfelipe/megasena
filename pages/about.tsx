@@ -6,6 +6,9 @@ import {
   Description,
 } from "../components/sharedstyles";
 
+import Image from "next/image";
+import Carbon from "../public/carbon.png";
+
 export default function About() {
   return (
     <Container>
@@ -18,6 +21,8 @@ export default function About() {
             Nikely Fedechen Martins
           </p>
           <p>Professor: José Rubens Rodrigues De Sousa</p>
+          <h3>A função Math.random() no JavaScript</h3>
+          <Image src={Carbon} alt="explicando o algoritmo de random" />
           <Link href="/">
             <a>&larr; Voltar</a>
           </Link>
