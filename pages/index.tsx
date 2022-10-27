@@ -25,13 +25,13 @@ export default function Home() {
     const response = await axios.get(
       "https://www.random.org/integers/?num=6&min=1&max=60&col=1&base=10&format=plain&rnd=new&unique=on"
     );
-    const numeros = response.data.split("\n");
-    numeros.pop();
+    const numerosRandomOrg = response.data.split("\n");
+    numerosRandomOrg.pop();
 
-    numeros.sort(function (a, b) {
+    numerosRandomOrg.sort(function (a, b) {
       return a - b;
     });
-    setNumeros(numeros);
+    setNumeros(numerosRandomOrg);
   };
 
   const getRandomIntInclusive = (min: number, max: number) => {
