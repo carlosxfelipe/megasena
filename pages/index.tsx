@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
+import axios from "axios";
 import {
   Container,
   Main,
@@ -7,10 +8,11 @@ import {
   Description,
   CodeTag,
 } from "../components/sharedstyles";
-import Cards from "../components/cards";
+import { Cards } from "../components/cards";
 
 import Image from "next/image";
 import logoMegasena from "../public/megasena-icon.png";
+import About from "../components/about";
 
 export default function Home() {
   const [numeros, setNumeros] = useState([]);
@@ -18,6 +20,19 @@ export default function Home() {
   useEffect(() => {
     generateMegaNumbers();
   }, []);
+
+  const generateFromRandomOrg = async () => {
+    const response = await axios.get(
+      "https://www.random.org/integers/?num=6&min=1&max=60&col=1&base=10&format=plain&rnd=new&unique=on"
+    );
+    const numeros = response.data.split("\n");
+    numeros.pop();
+
+    numeros.sort(function (a, b) {
+      return a - b;
+    });
+    setNumeros(numeros);
+  };
 
   const getRandomIntInclusive = (min: number, max: number) => {
     min = Math.ceil(min);
@@ -67,7 +82,19 @@ export default function Home() {
           </CodeTag>
         </Description>
 
-        <Cards onClick={generateMegaNumbers} />
+        <div style={{ display: "flex", marginTop: 40 }}>
+          <Cards
+            title="Gerar novos números com Math.random()"
+            onClick={generateMegaNumbers}
+            style={{ marginRight: 10 }}
+          />
+          <Cards
+            title="Gerar novos números com a API do RANDOM.ORG"
+            onClick={generateFromRandomOrg}
+          />
+        </div>
+
+        <About />
       </Main>
     </Container>
   );
