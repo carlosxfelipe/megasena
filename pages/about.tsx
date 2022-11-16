@@ -22,7 +22,14 @@ export default function About() {
           </p>
           <p>Professor: José Rubens Rodrigues De Sousa</p>
           <h3>A função Math.random() no JavaScript</h3>
-          <Image src={Carbon} alt="explicando o algoritmo de random" />
+          <p>
+            A função <code>Math.random()</code> retorna um número
+            pseudo-aleatório no intervalo [0, 1[, ou seja, de 0 (inclusivo) até,
+            mas não incluindo, 1 (exclusivo), que depois você pode dimensionar
+            para um intervalo desejado. A implementação seleciona uma semente
+            para o algoritmo de geração de números aleatórios; esta semente não
+            pode ser escolhida ou reatribuída.
+          </p>
           <h3>API do RANDOM.ORG</h3>
           <p style={{ textAlign: "justify", padding: 20 }}>
             RANDOM.ORG oferece números aleatórios verdadeiros para qualquer
