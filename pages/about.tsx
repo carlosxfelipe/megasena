@@ -22,7 +22,7 @@ export default function About() {
           </p>
           <p>Professor: José Rubens Rodrigues De Sousa</p>
           <h3>A função Math.random() no JavaScript</h3>
-          <p>
+          <p style={{ textAlign: "justify", padding: 20 }}>
             A função <code>Math.random()</code> retorna um número
             pseudo-aleatório no intervalo [0, 1[, ou seja, de 0 (inclusivo) até,
             mas não incluindo, 1 (exclusivo), que depois você pode dimensionar
